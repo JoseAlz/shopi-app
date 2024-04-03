@@ -1,0 +1,18 @@
+extends layout 
+
+block content 
+
+    h1= title
+
+    if all_categories.length 
+        ul(class='categories-list') 
+            for category in all_categories
+                //- li= category.name
+                a(href=category.url) 
+                    li  #{category.name}
+
+    else 
+        p There are no categories
+    
+    button 
+        a(href="/shop/categories/add") Add new Category 

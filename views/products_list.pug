@@ -1,0 +1,25 @@
+extends layout 
+
+block content 
+
+    h1= title
+
+    if category
+        button  
+            a(href= category.url + '/delete') Delete 
+
+
+    if all_products.length 
+        ul(class='products-list') 
+            
+            for product in all_products 
+                a(href=product.url) 
+                    li    
+                        h3(class='product-list-title') #{product.name}
+                        if product.image.length
+                            img(src=product.image class='prod-list-image')
+                        div(class='product-list-details') 
+                            p(class='rating-in-list') Rating: #{product.rating}
+                            p(class='price-in-list') Price:  $#{product.price}
+    else 
+        p There are NO products in SHOP
