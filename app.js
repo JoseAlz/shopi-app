@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose')
 mongoose.set('strictQuery', false)
-const mongoDB = "mongodb+srv://djufox:KyIPU8yil32OHvkT@cluster0.xsaczz1.mongodb.net/productsDB?retryWrites=true&w=majority";
+const mongoDB = "mongodb";//here cluster Atlas mongodb/drv/xxx
 
 var indexRouter = require('./routes/index')
 var productsRouter = require('./routes/products')
